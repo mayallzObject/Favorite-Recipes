@@ -36,7 +36,7 @@ This document outlines a simplified file structure for the `src` directory of a 
 - **tests**
 - **types**
 
-## typography (fonts)
+## Typography (fonts)
 
 ### smallerRegular
 
