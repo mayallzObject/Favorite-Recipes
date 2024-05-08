@@ -1,4 +1,4 @@
-## Recipes App
+# Recipes App
 
 ### Install and run
   1. npm install
