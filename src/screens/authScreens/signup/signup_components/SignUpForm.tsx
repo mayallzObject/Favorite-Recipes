@@ -13,6 +13,7 @@ import CustomTextInput from '@components/textInput/CustomTextInput';
 import { fonts } from '@constants/typography';
 import ArrowRightIcon from '@components/icons/ArrowRight';
 import Layout from '@constants/Layout';
+import { useState } from 'react';
 
 type SignUpReqBody = {
   username: string;
@@ -21,6 +22,7 @@ type SignUpReqBody = {
 };
 
 const SignUpForm = () => {
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
   const [signUp] = useSignUpAndCreateNewUserMutation();
 
   const formik = useFormik<SignUpReqBody>({
@@ -72,6 +74,7 @@ const SignUpForm = () => {
             placeholder="Enter Password"
             autoCapitalize="none"
             secureTextEntry
+            textContentType={'oneTimeCode'}
             focusColor={themeColors.primary.primary80}
             onChangeText={formik.handleChange('password')}
             containerStyle={styles.container}
@@ -80,10 +83,12 @@ const SignUpForm = () => {
             inputStyle={[]}
           />
           <CustomTextInput
+            onChangeText={(e) => setConfirmPassword(e)}
             label="Confirm Password"
             placeholder="Retype Password"
             autoCapitalize="none"
             secureTextEntry
+            textContentType={'oneTimeCode'}
             focusColor={themeColors.primary.primary80}
             containerStyle={styles.container}
             labelStyle={styles.label}
@@ -99,6 +104,7 @@ const SignUpForm = () => {
           <CustomButton
             size="large"
             title="Sign Up"
+            disabled={confirmPassword !== formik.values.password}
             onPress={() => formik.handleSubmit()}
             buttonIcon={<ArrowRightIcon size={20} />}
           />
