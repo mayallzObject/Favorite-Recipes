@@ -11,8 +11,30 @@
 ## Attation
   - user auth is currenly not pesisted, the app will take you too login on reload
 
-## File Stucture
-  -
+## File Structure
+
+### React App `src` Directory Structure
+
+This document outlines a simplified file structure for the `src` directory of a React application.
+
+### `src` Directory
+
+- **app**
+  - features
+    - auth
+    - middleware
+    - recipes
+  - hooks.ts
+  - store.ts
+- **components**
+- **context**
+- **hooks**
+- **navigation**
+- **screens**
+  - appScreens
+  - authScreens
+- **tests**
+- **types**
 
 ## typography (fonts)
 
@@ -90,116 +112,62 @@
 
 ## Colors
 
-/**
- * ### Color Types Documentation
- *
- * This document describes the color types and their definitions used in the application.
- */
+## Color Palette Documentation
 
-/**
- * ### Primary Colors
- *
- * These colors are part of the primary color palette.
- */
-type PrimaryColors = {
-  primary100: string;
-  primary80: string;
-  primary60: string;
-  primary40: string;
-  primary20: string;
-};
+This document outlines the color palette used in the application. The colors are categorized into primary, secondary, neutrals, and helper colors.
 
-/**
- * ### Secondary Colors
- *
- * These colors are part of the secondary color palette.
- */
-type SecondaryColors = {
-  secondary100: string;
-  secondary80: string;
-  secondary60: string;
-  secondary40: string;
-  secondary20: string;
-};
+### Primary Colors
 
-/**
- * ### Neutral Colors
- *
- * These colors are neutral and used for various purposes.
- */
-type NeutralColors = {
-  black1: string;
-  black2: string;
-  gray1: string;
-  gray2: string;
-  gray3: string;
-  gray4: string;
-  white: string;
-};
+Primary colors represent the main brand colors used throughout the application.
 
-/**
- * ### Helper Colors
- *
- * These colors are used for special purposes like ratings and warnings.
- */
-type HelperColors = {
-  rating1: string;
-  rating2: string;
-  warning1: string;
-  warning2: string;
-  success: string;
-};
+#### Shades
 
-/**
- * ### App Colors
- *
- * Combined definition of all color palettes.
- */
-export type AppColors = {
-  primary: PrimaryColors;
-  secondary: SecondaryColors;
-  neutrals: NeutralColors;
-  helpers: HelperColors;
-};
+- **primary100:** #129575
+- **primary80:** #71B1A1
+- **primary60:** #AFD3CA
+- **primary40:** #DBEBE7
+- **primary20:** #F6FAF9
 
-/**
- * ### Theme Colors
- *
- * Definition of the theme color palette.
- */
-export const themeColors: AppColors = {
-  primary: {
-    primary100: '#129575',
-    primary80: '#71B1A1',
-    primary60: '#AFD3CA',
-    primary40: '#DBEBE7',
-    primary20: '#F6FAF9',
-  },
+### Secondary Colors
 
-  secondary: {
-    secondary100: '#FF9C00',
-    secondary80: '#FFA61A',
-    secondary60: '#FFBA4D',
-    secondary40: '#FFCE80',
-    secondary20: '#FFE1B3',
-  },
-  neutrals: {
-    black1: '#000000',
-    black2: '#000000',
-    gray1: '#484848',
-    gray2: '#797979',
-    gray3: '#A9A9A9',
-    gray4: '#D9D9D9',
-    white: '#FFFFFF',
-  },
-  helpers: {
-    rating1: '#FFAD30',
-    rating2: '#FF9C00',
-    warning1: '#FFAD30',
-    warning2: '#995E00',
-    success: '#31B057',
-  },
-};
+Secondary colors complement the primary colors and are used for secondary elements or accents.
+
+#### Shades
+
+- **secondary100:** #FF9C00
+- **secondary80:** #FFA61A
+- **secondary60:** #FFBA4D
+- **secondary40:** #FFCE80
+- **secondary20:** #FFE1B3
+
+### Neutral Colors
+
+Neutral colors include shades of black, gray, and white, which are used for text, backgrounds, and borders.
+
+#### Shades
+
+- **black1:** #000000
+- **black2:** #000000
+- **gray1:** #484848
+- **gray2:** #797979
+- **gray3:** #A9A9A9
+- **gray4:** #D9D9D9
+- **white:** #FFFFFF
+
+### Helper Colors
+
+Helper colors are used for specific elements such as ratings, warnings, and success indicators.
+
+#### Shades
+
+- **rating1:** #FFAD30
+- **rating2:** #FF9C00
+- **warning1:** #FFAD30
+- **warning2:** #995E00
+- **success:** #31B057
+
+---
+This Markdown document provides an overview of the color palette used in the application, along with their respective shades and categories.
 
 ## Layout
 
@@ -298,27 +266,4 @@ export default {
   },
 };
 
-## File Structure
 
-### React App `src` Directory Structure
-
-This document outlines a simplified file structure for the `src` directory of a React application.
-
-### `src` Directory
-
-- **app**
-  - features
-    - auth
-    - middleware
-    - recipes
-  - hooks.ts
-  - store.ts
-- **components**
-- **context**
-- **hooks**
-- **navigation**
-- **screens**
-  - appScreens
-  - authScreens
-- **tests**
-- **types**
